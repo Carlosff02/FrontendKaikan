@@ -1,0 +1,8 @@
+
+.nav-link.active {
+    border-bottom: 2px solid red;
+  }
+  
+.bi {
+    cursor: pointer;
+}
