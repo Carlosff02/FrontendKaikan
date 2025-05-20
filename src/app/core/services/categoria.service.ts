@@ -8,9 +8,9 @@ import { url } from '../constants/constants';
 })
 export class CategoriaService {
 
-  private apiUrl = `${url}/categoria`
+  private readonly apiUrl = `${url}/categoria`
 
-  constructor(private http:HttpClient) { 
+  constructor(private readonly http:HttpClient) { 
 
   }
 

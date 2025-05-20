@@ -8,9 +8,9 @@ import { Plato } from '../models/plato';
   providedIn: 'root'
 })
 export class PlatoService {
-  private apiUrl = `${url}/platos`;
+  private readonly apiUrl = `${url}/platos`;
 
-  constructor(private http:HttpClient) { }
+  constructor(private readonly http:HttpClient) { }
 
   listarPlatos(): Observable<Plato[]>{
     return this.http.get<Plato[]>(this.apiUrl);

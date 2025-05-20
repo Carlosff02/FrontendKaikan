@@ -1,14 +1,16 @@
 <div class="container">
-    
+  <div class="row">
     @for (plato of platos; track $index) {
-        <div class="card mt-5" style="width: 18rem; ">
-            <img [src]="plato.img_url" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">{{plato.nombre}}</h5>
-              <p class="card-text">{{plato.descripcion}}</p>
-              <p class="card-text">{{plato.precio | currency}}</p>
-
-            </div>
-          </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-4">
+      <div class="card h-100">
+        <img [src]="plato.img_url" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{plato.nombre}}</h5>
+          <p class="card-text">{{plato.descripcion}}</p>
+          <p class="card-text">{{plato.precio | currency}}</p>
+        </div>
+      </div>
+    </div>
     }
+  </div>
 </div>

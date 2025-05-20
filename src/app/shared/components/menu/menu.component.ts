@@ -1,8 +1,7 @@
-import { Component, input, Input, SimpleChanges } from '@angular/core';
+import { Component,  Input, SimpleChanges } from '@angular/core';
 import { Plato } from '../../../core/models/plato';
 import { PlatoService } from '../../../core/services/plato.service';
 import { CommonModule } from '@angular/common';
-import { CategoriaService } from '../../../core/services/categoria.service';
 
 @Component({
   selector: 'app-menu',
@@ -13,8 +12,7 @@ import { CategoriaService } from '../../../core/services/categoria.service';
 export class MenuComponent {
   platos: Plato[] = [] 
   @Input() categoria: string = ''; 
-  hoy = new Date();
-  constructor(private platoService: PlatoService
+  constructor(private readonly platoService: PlatoService
   ){
     this.listarPlatos();
   }
@@ -22,7 +20,12 @@ export class MenuComponent {
   ngOnChanges(changes: SimpleChanges) {
     console.log('Cambios en el componente Menu:', changes);
     if (changes['categoria']) {
+      if(this.categoria=='todos'){
+        this.listarPlatos()
+      } else{
+        
       this.listarPlatosPorCategoria();
+      }
     }
   }
 
