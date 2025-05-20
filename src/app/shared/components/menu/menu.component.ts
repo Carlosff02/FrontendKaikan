@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, input, Input, SimpleChanges } from '@angular/core';
 import { Plato } from '../../../core/models/plato';
 import { PlatoService } from '../../../core/services/plato.service';
 import { CommonModule } from '@angular/common';
@@ -16,7 +16,14 @@ export class MenuComponent {
   hoy = new Date();
   constructor(private platoService: PlatoService
   ){
+    this.listarPlatos();
+  }
 
+  ngOnChanges(changes: SimpleChanges) {
+    console.log('Cambios en el componente Menu:', changes);
+    if (changes['categoria']) {
+      this.listarPlatosPorCategoria();
+    }
   }
 
   listarPlatos(){

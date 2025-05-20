@@ -4,7 +4,7 @@ export class Plato {
     id: number | null;
     nombre: string;
     descripcion: string;
-    img_src: string;
+    img_url: string;
     precio: number;
     categoria: Categoria;
 
@@ -12,7 +12,7 @@ export class Plato {
         this.id = id;
         this.nombre = nombre;
         this.descripcion = descripcion;
-        this.img_src = img_src;
+        this.img_url = img_src;
         this.precio = precio;
         this.categoria = categoria;
     }

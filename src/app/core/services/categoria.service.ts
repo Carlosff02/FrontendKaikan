@@ -1,14 +1,14 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { url } from 'node:inspector';
 import { Categoria } from '../models/categoria';
+import { url } from '../constants/constants';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CategoriaService {
 
-  private apiUrl = `${url}/api/categoria`
+  private apiUrl = `${url}/categoria`
 
   constructor(private http:HttpClient) { 
 

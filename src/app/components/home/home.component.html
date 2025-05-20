@@ -48,83 +48,11 @@
                class="rounded-circle border-3"
                [src]="categoria.img_url"
                [alt]="categoria.nombre"
-               style="width: 80px; height: 80px; object-fit: cover;">
+               style="width: 160px; height: 160px; object-fit: cover;">
           <p class="mt-2 text-secondary">{{categoria.nombre}}</p>
         </div>
       }
-      <!-- Categorías -->
-      <!--<div class="text-center" (click)="setCategoria('Salad')" style="cursor: pointer;">
-        <img [class.border]="categoria === 'Salad'"
-             class="rounded-circle border-3"
-             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMkWDyu9Yt4Mr1t1ZBasM81SvB2K2ZRyJYzg&s"
-             alt="Salad"
-             style="width: 80px; height: 80px; object-fit: cover;">
-        <p class="mt-2 text-secondary">Salad</p>
-      </div>
-  
-      <div class="text-center" (click)="setCategoria('Rolls')" style="cursor: pointer;">
-        <img [class.border]="categoria === 'Rolls'"
-             class="rounded-circle border-3"
-             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgXNTUqKzBP2oRLbQdUnilPs5BpbijTLmCDQ&s"
-             alt="Rolls"
-             style="width: 80px; height: 80px; object-fit: cover;">
-        <p class="mt-2 text-secondary">Rolls</p>
-      </div>
-  
-      <div class="text-center" (click)="setCategoria('Deserts')" style="cursor: pointer;">
-        <img [class.border]="categoria === 'Deserts'"
-             class="rounded-circle border-3"
-             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRlFF7lLc71P6zwulUaeYP1MUe-bXNmkATPQ&s"
-             alt="Deserts"
-             style="width: 80px; height: 80px; object-fit: cover;">
-        <p class="mt-2 text-secondary">Deserts</p>
-      </div>
-  
-      <div class="text-center" (click)="setCategoria('Sandwich')" style="cursor: pointer;">
-        <img [class.border]="categoria === 'Sandwich'"
-             class="rounded-circle border-3"
-             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-7gpP4xoVCphuI-QmHYcqGLedCr6eLb3G6Q&s"
-             alt="Sandwich"
-             style="width: 80px; height: 80px; object-fit: cover;">
-        <p class="mt-2 text-secondary">Sandwich</p>
-      </div>
-  
-      <div class="text-center" (click)="setCategoria('Cake')" style="cursor: pointer;">
-        <img [class.border]="categoria === 'Cake'"
-             class="rounded-circle border-3"
-             src="https://ichef.bbc.co.uk/ace/standard/1600/food/recipes/funfetti_cake_49993_16x9.jpg.webp"
-             alt="Cake"
-             style="width: 80px; height: 80px; object-fit: cover;">
-        <p class="mt-2 text-secondary">Cake</p>
-      </div>
-  
-      <div class="text-center" (click)="setCategoria('Pure Veg')" style="cursor: pointer;">
-        <img [class.border]="categoria === 'Pure Veg'"
-             class="rounded-circle border-3"
-             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiS7oLkS6HU9qV9anBBQs_Jps6uX2SXGnzHA&s"
-             alt="Pure Veg"
-             style="width: 80px; height: 80px; object-fit: cover;">
-        <p class="mt-2 text-secondary">Pure Veg</p>
-      </div>
-  
-      <div class="text-center" (click)="setCategoria('Pasta')" style="cursor: pointer;">
-        <img [class.border]="categoria === 'Pasta'"
-             class="rounded-circle border-3"
-             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4ODK2tmAkskaKYm0JUz6aHpeo7TyvAHxT8A&s"
-             alt="Pasta"
-             style="width: 80px; height: 80px; object-fit: cover;">
-        <p class="mt-2 text-secondary">Pasta</p>
-      </div>
-  
-      <div class="text-center" (click)="setCategoria('Noodles')" style="cursor: pointer;">
-        <img [class.border]="categoria === 'Noodles'"
-             class="rounded-circle border-3"
-             src="https://marleyspoon.com/media/recipes/224442/main_photos/large/stir-c0162ebd540780d497f1c8a5bcc9a5d8.jpeg"
-             alt="Noodles"
-             style="width: 80px; height: 80px; object-fit: cover;">
-        <p class="mt-2 text-secondary">Noodles</p>
-      </div>
-    </div>-->
+     
   </div>
 
-  <app-menu id="menu"></app-menu>
+  <app-menu id="menu" [categoria] = "categoria" ></app-menu>

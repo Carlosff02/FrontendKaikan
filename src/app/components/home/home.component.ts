@@ -16,7 +16,7 @@ import { CategoriaService } from '../../core/services/categoria.service';
 })
 export class HomeComponent {
   categoria: string = 'All';
-  categorias:Categoria[] = [];
+  categorias:Categoria[] = [new Categoria(1,'Makis','https://th.bing.com/th/id/OIP.lJeUtARGoa08QAfhixSTXgAAAA?rs=1&pid=ImgDetMain')];
 
   constructor(private categoriaService:CategoriaService){
     this.listarCategorias();

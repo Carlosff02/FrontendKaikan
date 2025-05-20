@@ -1,8 +1,8 @@
 <div class="container">
     
     @for (plato of platos; track $index) {
-        <div class="card" style="width: 18rem;">
-            <img [src]="plato.img_src" class="card-img-top" alt="...">
+        <div class="card mt-5" style="width: 18rem; ">
+            <img [src]="plato.img_url" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">{{plato.nombre}}</h5>
               <p class="card-text">{{plato.descripcion}}</p>
