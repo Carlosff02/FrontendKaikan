@@ -17,7 +17,7 @@ export class MenuComponent {
   @Input() categoria: string = ''; 
   constructor(private readonly platoService: PlatoService
   ){
-    this.listarPlatos();
+    
   }
 
   ngOnChanges(changes: SimpleChanges) {
@@ -30,6 +30,9 @@ export class MenuComponent {
       this.listarPlatosPorCategoria();
       }
     }
+  }
+  ngOnInit(){
+    this.listarPlatos();
   }
 
   listarPlatos(){
