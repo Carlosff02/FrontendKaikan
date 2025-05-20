@@ -1,4 +1,11 @@
-<div class="container">
+<div class="spinner-container" *ngIf="isProcessing">
+    <mat-spinner></mat-spinner>
+   </div>
+<div *ngIf="!isProcessing" class="container-fluid">
+  <div *ngIf="platos.length === 0" class="text-center">
+    <p>No hay platos disponibles</p>
+  </div>
+
   <div class="row">
     @for (plato of platos; track $index) {
     <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-4">
@@ -13,4 +20,7 @@
     </div>
     }
   </div>
+
 </div>
+  
+

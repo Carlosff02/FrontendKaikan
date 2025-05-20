@@ -3,3 +3,14 @@
     grid-template-columns: auto auto auto;
     gap: 10px;
 }
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:30vh;
+}
+@media (max-width:760px) {
+    .container{
+        width: 80vw !important;
+    }
+}

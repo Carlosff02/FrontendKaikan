@@ -6,8 +6,4 @@
 .bi {
     cursor: pointer;
 }
-.carousel-img {
-  height: 400px; 
-  object-fit: cover;
-  border-radius: 0.75rem;
-}
+
